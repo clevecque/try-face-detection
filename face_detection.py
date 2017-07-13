@@ -27,10 +27,12 @@ def detect_face(imagePath):
 
   print("Found {0} faces!".format(len(faces)))
 
-
+  coordonates = [None]
   # Draw a rectangle around the faces
   for (x, y, w, h) in faces:
     # cv2.rectangle(image, (x, y), (x+w, y+h), (0, 255, 0), 2)
     coordonates = [x,y,x+w,y+h]
 
   return coordonates
+
+detect_face('chemise_4.jpg')
